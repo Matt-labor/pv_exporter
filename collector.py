@@ -1,7 +1,7 @@
 import logging
 import time
 import os
-import epics
+#import epics
 
 from datetime import datetime, timedelta
 from prometheus_client import Summary

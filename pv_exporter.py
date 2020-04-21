@@ -20,7 +20,7 @@ def main():
     signal.signal(signal.SIGTERM, signal_handler)
     logging.getLogger().setLevel(logging.INFO)
 
-    parser = argparse.ArgumentParser(description="epics pv_exporter exporter for Prometheus.")
+    parser = argparse.ArgumentParser(description="epics pv_exporter for Prome theus.")
     parser.add_argument('-c', '--config-file', default='pv_exporter.yml',
                         help='path to configuration file.')
     parser.add_argument('-p', '--port', default=9991,
