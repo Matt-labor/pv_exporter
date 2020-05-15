@@ -10,5 +10,5 @@ class PvWatch(object):
         #self.upload_patterns
 
     def start(self):
-        # receiving PV updates and posting new web content
-        
+        # receiving PV updates
+    def

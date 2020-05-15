@@ -6,7 +6,7 @@ import logging
 import signal
 
 from pormetheus_client import Counter, Gauge, start_http_server
-from prometheus_client.core import CollectorRegistry
+from prometheus_client.core import CollectorRegistry, REGISTRY
 from pv_exporter.collector import PvCollector, CollectorConfig
 
 def shutdown():
@@ -31,6 +31,7 @@ def main():
         cfg = yaml.load(config_file, Loader=yaml.FullLoader)
     #collector_config = CollectorConfig(**cfg)
     collector = PvCollector()
+    REGISTRY.registrer(collector)
 
 
 
