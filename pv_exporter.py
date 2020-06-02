@@ -29,14 +29,15 @@ def main():
 
     with open(args.config_file, 'r') as config_file:
         cfg = yaml.load(config_file, Loader=yaml.FullLoader)
-    #collector_config = CollectorConfig(**cfg)
-    collector = PvCollector()
-    REGISTRY.registrer(collector)
-
-
-
-
-
+    collector = PvCollector(**cfg)
+    start_http_server(6666)
+    logging.info("Starting exporter, listen on {}".format(int(6666)))
+    REGISTRY.register(collector)
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        pass
 
 if __name__ == '__main__':
     main()
