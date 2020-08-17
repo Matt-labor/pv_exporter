@@ -31,7 +31,7 @@ def main():
         cfg = yaml.load(config_file, Loader=yaml.FullLoader)
     collector = PvCollector(**cfg)
     start_http_server(6666)
-    logging.info("Starting exporter, listen on {}".format(int(6666)))
+    logging.info("Starting exporter, listen on 6666")
     REGISTRY.register(collector)
     try:
         while True:
