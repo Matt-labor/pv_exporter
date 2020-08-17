@@ -1,0 +1,48 @@
+systems:
+  ECR:
+   alert_item:高压负载报警
+    pv:
+     - LECR5:HVPS:getVolt
+   alert_item:抑制电源电流报警
+    pv:
+     - LECR5:RVPS:getCurr
+   alert_item:源体水压报警
+    pv：
+     - LECR5:WP2
+   alert_item:源体水温报警
+    pv:
+     - LECR5:WT2
+  LeakageMonitoring:
+   alert_item:离子源_SFC_SSC
+    pv:
+     - dataPa
+     - Pa1
+     - Pa2
+     - Pa3
+     - Pa4
+     - Pa5
+     - Pa6
+     - Pa7
+     - Pa8
+     - Pa9
+     - Pa10
+     - Pa11
+     - Pa12
+     - dataPb
+     - Pb1
+     - Pb2
+     - Pb3
+     - Pb4
+     - Pb5
+     - Pb6
+   alert_item:实验大厅
+   alert_item:CSRm
+   alert_item:CSRe
+   alert_item:RIBLL II
+   alert_item:CSRm东西平台
+   alert_item:CSRE东西平台
+   alert_item:电源间
+
+
+
+
